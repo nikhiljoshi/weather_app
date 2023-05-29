@@ -23,8 +23,9 @@ The app uses clean architecture and MVVM pattern.
 * Timber Logging library
 
 ## Core Libraries
-*   [Dagger 2](https://dagger.dev/) for dependency injection
-*   [Retrofit 2](https://github.com/square/retrofit) and [RxJava](https://github.com/ReactiveX/RxJava) for networking
+*   [KOIN 2](https://insert-koin.io/) for dependency injection
+*   [Retrofit 2](https://github.com/square/retrofit) and 
+* [Coroutines]
 *   [Gson](https://github.com/google/gson) for parsing JSON
 *   [Navigation](https://developer.android.com/jetpack/compose/navigation) to navigate between screens
 *   Kotlin Coroutines
