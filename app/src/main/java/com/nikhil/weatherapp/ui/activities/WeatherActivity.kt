@@ -1,6 +1,5 @@
 package com.nikhil.weatherapp.ui.activities
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -59,7 +58,6 @@ class WeatherActivity : AppCompatActivity(), KoinComponent {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun observeAPICall() {
         viewModel.weatherLiveData.observe(this, EventObserver { state ->
             when (state) {
@@ -74,7 +72,7 @@ class WeatherActivity : AppCompatActivity(), KoinComponent {
                         val iconCode = weatherDetail.icon?.replace("n", "d")
                         AppUtils.setGlideImage(
                             dataBind.imageWeatherSymbol,
-                            AppConstants.WEATHER_API_IMAGE_ENDPOINT + "${iconCode}@4x.png"
+                            AppConstants.IMAGE_ENDPOINT + "${iconCode}@4x.png"
                         )
                         changeBgAccToTemp(iconCode)
                         dataBind.textTodaysDate.text =

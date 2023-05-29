@@ -1,6 +1,5 @@
 package com.nikhil.weatherapp.ui.adapters
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -44,13 +43,12 @@ class FavCityTemperatureAdapter :
     inner class ViewHolder(private val binding: ListItemCityBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        @SuppressLint("SetTextI18n")
         fun bindItems(weatherDetail: WeatherDetail) {
             binding.apply {
                 val iconCode = weatherDetail.icon?.replace("n", "d")
                 AppUtils.setGlideImage(
                     imageWeatherSymbol,
-                    AppConstants.WEATHER_API_IMAGE_ENDPOINT + "${iconCode}@4x.png"
+                    AppConstants.IMAGE_ENDPOINT + "${iconCode}@4x.png"
                 )
                 textCityName.text =
                     "${weatherDetail.cityName?.capitalize()}, ${weatherDetail.countryName}"
